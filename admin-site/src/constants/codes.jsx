@@ -1,4 +1,4 @@
-const codes = {
+const workshopCodes = {
     // workshops
     GENERATIVEAI: { name: 'Generative AI Workshop', team: 1, cost: 799 },
     ETHICALHACKING: { name: 'Cyber Security In The Age of AI Workshop', team: 1, cost: 999 },
@@ -9,7 +9,11 @@ const codes = {
     FULLSTACKDEV: { name: 'Full Stack Development Workshop', team: 1, cost: 499 },
     DATASCIENCE: { name: 'Data Science with Python Workshop', team: 1, cost: 499 },
     SIXTHSENSEROBO: { name: 'Sixth Sense Robotics Workshop', team: 1, cost: 1199 },
-    DESIGNTHINKING: { name: 'Design Thinking For Space Colonization Workshop', team: 1, cost: 299 },
+    DESIGNTHINKING: { name: 'Design Thinking For Space Colonization Workshop', team: 1, cost: 299 }
+
+};
+
+const eventCodes = {
     // events
     GENERALREGISTRATION: { name: 'General Registration', team: 1, cost: 299 },
     CIVILX: { name: 'Civil X', type: 'Iconic', team: 3, cost: 149 },
@@ -29,4 +33,5 @@ const codes = {
     RIDDLESPHINX: { name: 'Riddle of Sphinx', type: 'Online', team: 1, cost: 0 },
  };
  
- export default codes;
+ export {workshopCodes, eventCodes};
+
