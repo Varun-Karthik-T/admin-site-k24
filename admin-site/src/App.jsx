@@ -1,4 +1,3 @@
-
 // import {
 //   Table,
 //   TableBody,
@@ -12,21 +11,14 @@
 // import { Button } from "@/components/ui/button.jsx"
 
 //import codes from "./Constants/codes.jsx"
-
-import AdminRouter from "./routes/routes"
+import AdminRouter from "./routes/routes";
 
 function App() {
-  
   return (
     <>
-    
-    <AdminRouter />
+      <AdminRouter />
     </>
-    
- 
- 
- 
-  )
+  );
 }
 
-export default App
+export default App;

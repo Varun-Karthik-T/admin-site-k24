@@ -1,18 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Participants }from "../pages/participants";
-import {WorkshopStats} from "../pages/workshopstats";
-import {EventStats} from "../pages/eventstats";
-import { Navbar } from "../components/navbar";
-
+import MainPage from "@/pages/MainPage";
+import UserPage from "@/pages/Users";
+import TeamPage from "@/pages/Teams";
+import EventPage from "@/pages/Events";
+import GraphPage from "@/pages/Graphs";
 function AdminRouter() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/workshopstats" element={<WorkshopStats />} />
-          <Route path="/eventstats" element={<EventStats />} />
-          <Route path="/participants" element={<Participants />} />
-          <Route path="/" element={<Navbar/>} />
+          <Route path="/" element={<MainPage />}>
+            <Route path="users" element={<UserPage />} />
+            <Route path="teams" element={<TeamPage />} />
+            <Route path="events" element={<EventPage />} />
+            <Route path="graphs" element={<GraphPage />} />
+          </Route>
         </Routes>
       </Router>
     </div>

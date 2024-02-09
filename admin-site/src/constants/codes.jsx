@@ -32,6 +32,10 @@ const eventCodes = {
     SHERLOCK: { name: 'Sherlockk & Wattson', type: 'Online', team: 1, cost: 0 },
     RIDDLESPHINX: { name: 'Riddle of Sphinx', type: 'Online', team: 1, cost: 0 },
  };
+
+ const headers = [
+    "Event","Team","Cost","College","Payment Status"
+ ]
  
- export {workshopCodes, eventCodes};
+ export {workshopCodes, eventCodes, headers};
 
