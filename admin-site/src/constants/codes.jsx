@@ -33,9 +33,73 @@ const eventCodes = {
     RIDDLESPHINX: { name: 'Riddle of Sphinx', type: 'Online', team: 1, cost: 0 },
  };
 
- const headers = [
-    "event","team","cost","college","paymentStatus","date"
- ]
+ const sampleEventsData = [
+    {
+      event: "Robo wars",
+      team: "binary potatoes",
+      cost: 999,
+      college: "IIT Bombay",
+      paymentStatus: "Paid",
+      date: "2021-09-12",
+    },
+    {
+      event: "Code fest",
+      team: "hexagonal donuts",
+      cost: 799,
+      college: "IIT Delhi",
+      paymentStatus: "Unpaid",
+      date: "2021-10-15",
+    },
+    {
+      event: "Hackathon",
+      team: "quantum bits",
+      cost: 1299,
+      college: "IIT Madras",
+      paymentStatus: "Paid",
+      date: "2021-11-20",
+    },
+    {
+      event: "Hackathon",
+      team: "Shoot the kuruvi",
+      cost: 1299,
+      college: "CEG",
+      paymentStatus: "Paid",
+      date: "2021-11-20",
+    },
+    {
+      event: "AI challenge",
+      team: "neural networks",
+      cost: 1499,
+      college: "IIT Kanpur",
+      paymentStatus: "Unpaid",
+      date: "2021-12-05",
+    },
+    {
+      event: "AI challenge",
+      team: "Cegians",
+      cost: 1499,
+      college: "CEG",
+      paymentStatus: "Unpaid",
+      date: "2023-12-05",
+    },
+    {
+      event: "Dance competition",
+      team: "twisters",
+      cost: 199,
+      college: "CEG",
+      paymentStatus: "paid",
+      date: "2021-12-08",
+    },
+    {
+      event: "AI challenge",
+      team: "neural networks",
+      cost: 1499,
+      college: "CEG",
+      paymentStatus: "Unpaid",
+      date: "2021-12-05",
+    },
+  ]
+
  
- export {workshopCodes, eventCodes, headers};
+ export {workshopCodes, eventCodes, sampleEventsData};
 
