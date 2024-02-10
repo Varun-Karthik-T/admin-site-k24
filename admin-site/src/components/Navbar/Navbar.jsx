@@ -7,10 +7,10 @@ export default function Navbar() {
 
   return (
     <>
-      <Button onClick={() => navigate("/Events")}>Event filters</Button>
-      <Button onClick={() => navigate("/Users")}>Total Users</Button>
-      <Button onClick={() => navigate("/Teams")}>Team filters</Button>
-      <Button onClick={() => navigate("/Graphs")}>Graphs</Button>
+      <Button onClick={() => navigate("/referrals")}>Referrals</Button>
+      <Button onClick={() => navigate("/users")}>Users</Button>
+      <Button onClick={() => navigate("/technovation")}>Technovation</Button>
+      <Button onClick={() => navigate("/registrations")}>Registrations</Button>
     </>
   );
 }

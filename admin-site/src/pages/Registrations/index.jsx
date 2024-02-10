@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { sampleEventsData } from "@/constants/codes";
 import { Button } from "@/components/ui/button";
 
-export default function EventsPage() {
+export default function RegistrationsPage() {
   const [headers, setHeaders] = useState([
     "event",
     "team",
@@ -34,33 +34,37 @@ export default function EventsPage() {
   }
 
   function getPaidTeams(data) {
-    const paidTeams = data.filter(item => item.paymentStatus === "Paid");
+    const paidTeams = data.filter((item) => item.paymentStatus === "Paid");
     setProcessedData(paidTeams);
     setProcessedHeaders(headers);
   }
   function getUnpaidTeams(data) {
-    const paidTeams = data.filter(item => item.paymentStatus === "Unpaid");
+    const paidTeams = data.filter((item) => item.paymentStatus === "Unpaid");
     setProcessedData(paidTeams);
     setProcessedHeaders(headers);
   }
   function getCEG(data) {
-    const CEGTeams = data.filter(item => item.college === "CEG");
+    const CEGTeams = data.filter((item) => item.college === "CEG");
     setProcessedData(CEGTeams);
     setProcessedHeaders(headers);
   }
   function getNotCEG(data) {
-    const notCEGTeams = data.filter(item => item.college != "CEG");
+    const notCEGTeams = data.filter((item) => item.college != "CEG");
     setProcessedData(notCEGTeams);
     setProcessedHeaders(headers);
   }
 
   function sortByDateAsc(data) {
-    const sortedData = [...data].sort((a, b) => new Date(a.date) - new Date(b.date));
+    const sortedData = [...data].sort(
+      (a, b) => new Date(a.date) - new Date(b.date)
+    );
     setProcessedData(sortedData);
     setProcessedHeaders(headers);
   }
   function sortByDateDesc(data) {
-    const sortedData = [...data].sort((a, b) => new Date(b.date) - new Date(a.date));
+    const sortedData = [...data].sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
     setProcessedData(sortedData);
     setProcessedHeaders(headers);
   }
@@ -72,15 +76,12 @@ export default function EventsPage() {
 
   return (
     <div>
-      <h1>Events</h1>
+      <h1>Registration</h1>
       <Button onClick={() => getEventWiseParticipants(data)}>
         {" "}
         Get count{" "}
       </Button>
-      <Button onClick={() => removeFilters()}>
-        {" "}
-        Remove filters{" "}
-      </Button>
+      <Button onClick={() => removeFilters()}> Remove filters </Button>
       <Button onClick={() => getPaidTeams(data)}> Get paid teams </Button>
       <Button onClick={() => getUnpaidTeams(data)}> Get unpaid teams </Button>
       <Button onClick={() => getCEG(data)}> Get CEG teams </Button>

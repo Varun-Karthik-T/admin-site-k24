@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "@/pages/MainPage";
 import UserPage from "@/pages/Users";
-import TeamPage from "@/pages/Teams";
-import EventPage from "@/pages/Events";
-import GraphPage from "@/pages/Graphs";
+import TechnovationPage from "@/pages/Technovation";
+import RegistrationPage from "@/pages/Registrations";
+import ReferralPage from "@/pages/Referrals";
 function AdminRouter() {
   return (
     <div>
@@ -11,9 +11,9 @@ function AdminRouter() {
         <Routes>
           <Route path="/" element={<MainPage />}>
             <Route path="users" element={<UserPage />} />
-            <Route path="teams" element={<TeamPage />} />
-            <Route path="events" element={<EventPage />} />
-            <Route path="graphs" element={<GraphPage />} />
+            <Route path="technovation" element={<TechnovationPage />} />
+            <Route path="registrations" element={<RegistrationPage />} />
+            <Route path="referrals" element={<ReferralPage />} />
           </Route>
         </Routes>
       </Router>

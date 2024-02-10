@@ -7,28 +7,31 @@ import {
   TableCell,
   TableBody,
 } from "../ui/table";
+import { ScrollArea } from "../ui/scroll-area";
 
 export default function DataTable({ data, headers }) {
   return (
     <div>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            {headers.map((header, index) => (
-              <TableHead key={index}>{header}</TableHead>
-            ))}
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {data.map((data, index) => (
-            <TableRow key={index}>
+      <ScrollArea className="h-96 w-full">
+        <Table>
+          <TableHeader>
+            <TableRow>
               {headers.map((header, index) => (
-                <TableCell key={index}>{data[header]}</TableCell>
+                <TableHead key={index}>{header}</TableHead>
               ))}
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {data.map((data, index) => (
+              <TableRow key={index}>
+                {headers.map((header, index) => (
+                  <TableCell key={index}>{data[header]}</TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </ScrollArea>
     </div>
   );
 }
