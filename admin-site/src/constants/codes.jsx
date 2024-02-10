@@ -100,6 +100,8 @@ const eventCodes = {
     },
   ]
 
+  const URL = "http://localhost:8000"
+
  
- export {workshopCodes, eventCodes, sampleEventsData};
+ export {workshopCodes, eventCodes, sampleEventsData, URL};
 
