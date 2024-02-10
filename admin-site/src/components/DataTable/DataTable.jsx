@@ -1,5 +1,12 @@
 import React from "react";
-import { Table, TableHeader, TableHead, TableRow, TableCell, TableBody } from "../ui/table";
+import {
+  Table,
+  TableHeader,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "../ui/table";
 
 export default function DataTable({ data, headers }) {
   return (
@@ -15,7 +22,9 @@ export default function DataTable({ data, headers }) {
         <TableBody>
           {data.map((data, index) => (
             <TableRow key={index}>
-                <TableCell>summa</TableCell>
+              {headers.map((header, index) => (
+                <TableCell key={index}>{data[header]}</TableCell>
+              ))}
             </TableRow>
           ))}
         </TableBody>

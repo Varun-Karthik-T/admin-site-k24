@@ -34,7 +34,7 @@ const eventCodes = {
  };
 
  const headers = [
-    "Event","Team","Cost","College","Payment Status"
+    "event","team","cost","college","paymentStatus","date"
  ]
  
  export {workshopCodes, eventCodes, headers};
